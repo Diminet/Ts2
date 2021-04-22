@@ -41,11 +41,11 @@ public class Apoidate {
 
         Map<String, Object[]> valutes=
                 new TreeMap<String, Object[]>();
-        valutes.put("+", new Object[]{"Name", "Date"});
+        valutes.put("*", new Object[]{"Name", "Date"});
 
-        valutes.put("-", new Object[]{valCurs.getName(), valCurs.getDate()});
+        valutes.put("+", new Object[]{valCurs.getName(), valCurs.getDate()});
 
-        valutes.put("ID", new Object[]{"NumCode", "CharCode", "Nominal",
+        valutes.put("/", new Object[]{"NumCode", "CharCode", "Nominal",
                 "Name", "Value"});
 
         for (Valute valute : valCurs.getList()) {
