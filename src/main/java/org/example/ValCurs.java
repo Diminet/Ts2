@@ -24,7 +24,6 @@ public class ValCurs {
 
 
 
-
     public String getDate() {
         return date;
     }

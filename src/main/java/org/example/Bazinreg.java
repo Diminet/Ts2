@@ -12,7 +12,6 @@ import java.io.InputStreamReader;
 public class Bazinreg {
     public static ValCurs sendGet(String parametr) throws Exception {
 
-
         HttpClient client = new DefaultHttpClient();
 
         String uri= "http://bnm.md/en/official_exchange_rates?get_xml=1&date="+parametr;

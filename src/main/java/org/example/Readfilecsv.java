@@ -24,10 +24,10 @@ public class Readfilecsv {
                         arrayarstring.add(date);
 
 
-                        System.out.println("Record No - " + csvRecord.getRecordNumber());
-                        System.out.println("---------------");
-                        System.out.println("Number : " + date);
-                        System.out.println("---------------\n\n");
+                        System.out.println("No - " + csvRecord.getRecordNumber());
+
+                        System.out.println("Data : " + date);
+
                     }
                 }
             }

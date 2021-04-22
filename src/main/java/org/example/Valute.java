@@ -68,7 +68,6 @@ public class Valute {
         this.id = id;
     }
 
-
     @Override
     public String toString() {
         return ("Valute:ID:" + id + "\nNumCode:" + numCode + "\nCharCode:" + charCode + "\nnominal:" + nominal + "\nname:" + name + "\nvalue:" + value);

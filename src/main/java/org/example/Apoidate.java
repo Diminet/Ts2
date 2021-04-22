@@ -24,37 +24,23 @@ public class Apoidate {
             openWorkBook(temp);
         }
     }
-
     private static void createWorkBook() throws IOException {
-//Create Blank workbook
-
         XSSFWorkbook workbook=new XSSFWorkbook();
-
-//Create file system using specific name
         FileOutputStream out=new FileOutputStream(new File("inreg.xlsx"));
-
-//write operation workbook using file out object
         workbook.write(out);
         out.close();
 
     }
 
-
     private static void openWorkBook(ValCurs valCurs) throws Exception {
         File file=new File("inreg.xlsx");
         FileInputStream fIP=new FileInputStream(file);
-
-//Get the workbook instance for XLSX file
         XSSFWorkbook workbook=new XSSFWorkbook(fIP);
         XSSFSheet spreadsheet=workbook.createSheet(valCurs.getDate());
-
-
         XSSFRow row=spreadsheet.createRow((short) 1);
-
 
         Map<String, Object[]> valutes=
                 new TreeMap<String, Object[]>();
-
         valutes.put("+", new Object[]{"Name", "Date"});
 
         valutes.put("-", new Object[]{valCurs.getName(), valCurs.getDate()});
@@ -71,8 +57,6 @@ public class Apoidate {
                     Double.toString(valute.getValue())});
         }
 
-
-//Iterate over data and write to sheet
         Set<String> keyid=valutes.keySet();
         int rowid=0;
 
@@ -87,11 +71,10 @@ public class Apoidate {
             }
         }
 
-//Write the workbook in file system
         FileOutputStream out=new FileOutputStream(new File("inreg.xlsx"));
         workbook.write(out);
         out.close();
-        System.out.println("Workbook.xlsx written successfully");
+        System.out.println("Inscriere cu succes");
     }
 
 
